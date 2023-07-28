@@ -19,10 +19,10 @@ libgcc-ng=9.3.0=h5101ec6_17
 libgomp=9.3.0=h5101ec6_17
 libstdcxx-ng=9.3.0=hd4cf53a_17
 ncurses=6.3=h7f8727e_2
-numpy=1.21.5=pypi_0
+numpy=1.22=pypi_0
 opencv-python=4.5.5.64=pypi_0
 openssl=1.1.1n=h7f8727e_0
-pillow=9.0.1=pypi_0
+pillow=9.0.1
 pip=21.2.4=py39h06a4308_0
 pipreqs=0.4.11=pypi_0
 pybind11=2.7.1=pypi_0
