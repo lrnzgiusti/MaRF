@@ -107,10 +107,10 @@ RUN echo "Installing BlurDetection2..." \
 
 ##### A NEW URL WILL BE NEEDED EVERY 30 DAYS #####
 
-RUN echo "Installing Mars-Metaverse..." \
+RUN echo "Installing Mars Metaverse..." \
 	&& cd /opt \
-	&& git clone https://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@github.com/marsai2/mars-metaverse.git \
-	&& cp /opt/mars-metaverse/scripts/uncertainty/uncertainty.py /opt/instant-ngp/scripts
+	&& git clone https://github.com/lrnzgiusti/MaRF.git \
+	&& cp /opt/MaRF/scripts/uncertainty/uncertainty.py /opt/instant-ngp/scripts
 
 COPY requirements/pip_requirements.txt ./
 
