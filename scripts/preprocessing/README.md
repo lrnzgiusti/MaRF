@@ -58,7 +58,7 @@ Arguments
 
 ### example usage 1:
 ```
-python ~/repos/mars-metaverse/scripts/preprocessing/pipeline.py --pull --server mastcam --sol_start 1 --sol_end 5 --input ~/data/mastcam/scans --output ~/mastcam/images --size 3000000 --res --width 1920 --height 1080 --rgb --hist --dedupe --hash 5 --bd ~/repos/BlurDetection2 --blur 100 --clean --ngp ~/repos/instant-ngp --colmap_matcher sequential
+python ~/repos/MaRF/scripts/preprocessing/pipeline.py --pull --server mastcam --sol_start 1 --sol_end 5 --input ~/data/mastcam/scans --output ~/mastcam/images --size 3000000 --res --width 1920 --height 1080 --rgb --hist --dedupe --hash 5 --bd ~/repos/BlurDetection2 --blur 100 --clean --ngp ~/repos/instant-ngp --colmap_matcher sequential
 ```
 - pull images from mastcam sols 1 thru 5
 - use the input folder to store raw downloaded files
@@ -75,7 +75,7 @@ python ~/repos/mars-metaverse/scripts/preprocessing/pipeline.py --pull --server 
 
 ### example usage 2:
 ```
-python ~/repos/mars-metaverse/scripts/preprocessing/pipeline.py --input ../SOL00059/scans --output ../SOL00059/images
+python ~/repos/MaRF/scripts/preprocessing/pipeline.py --input ../SOL00059/scans --output ../SOL00059/images
 ```
 - bypass downloading files from PDS
 - use the input folder as input
