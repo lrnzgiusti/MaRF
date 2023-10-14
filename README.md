@@ -8,22 +8,22 @@ To install Instant NGP, the [following requirements](https://github.com/NVlabs/i
 
 
 ## 0b. Installation
-Create a directory named 'repos' in your home directory (~/repos). Clone all repositories in here. To install all software requirements, begin with the instructions to [install Instant-NGP](https://github.com/NVlabs/instant-ngp#requirements) for your system. PIP requirements for Instant NGP can be found in mars-metaverse/requirements/ngp_requirements.txt.
+Create a directory named 'repos' in your home directory (~/repos). Clone all repositories in here. To install all software requirements, begin with the instructions to [install Instant-NGP](https://github.com/NVlabs/instant-ngp#requirements) for your system. PIP requirements for Instant NGP can be found in MaRF/requirements/ngp_requirements.txt.
 
 Then, [compile Instant NGP](https://github.com/NVlabs/instant-ngp#compilation-windows--linux).
 
 After compiling Instant NGP for the first time, a few more installations are required. In the same directory as Instant NGP, colmap, and ceres-solver, clone the following repositories:
 - [BlurDetection2](https://github.com/WillBrennan/BlurDetection2) - license [here](https://github.com/WillBrennan/BlurDetection2/blob/master/LICENSE)
-- [Mars Metaverse](https://github.com/marsai2/mars-metaverse)
+- [Mars Metaverse](https://github.com/lrnzgiusti/MaRF)
 
-Then, navigate to mars-metaverse/requirements in terminal, and run
+Then, navigate to MaRF/requirements in terminal, and run
 ```bash
 pip install -r pip_requirements.txt
 ```
 
 
 ## 1. Preparing a dataset
-To prepare a sol dataset, more details can be found [here.](https://github.com/marsai2/mars-metaverse/tree/main/scripts/preprocessing#preprocessing-steps)
+To prepare a sol dataset, more details can be found [here.](https://github.com/lrnzgiusti/MaRF/tree/main/scripts/preprocessing#preprocessing-steps)
 NOTE: Colmap requires its working directory to have "images" folder inside. Keep this in mind when setting your --output flag (should end with /images)
 
 We have included two datasets for immediate use:
@@ -32,13 +32,13 @@ We have included two datasets for immediate use:
 
 To run on a sol dataset:
 ```bash
-cd [Dir to Mars-Metaverse]
-python ~/repos/mars-metaverse/scripts/preprocessing/pipeline.py --pull --server mastcam --sol_start 1 --sol_end 5 --input ~/data/mastcam/scans --output ~/mastcam/images --size 3000000 --res --width 1920 --height 1080 --rgb --hist --dedupe --hash 5 --bd ~/repos/BlurDetection2 --blur 100 --clean --ngp ~/repos/instant-ngp --colmap_matcher sequential
+cd [Dir to MaRF]
+python scripts/preprocessing/pipeline.py --pull --server mastcam --sol_start 1 --sol_end 5 --input ~/data/mastcam/scans --output ~/mastcam/images --size 3000000 --res --width 1920 --height 1080 --rgb --hist --dedupe --hash 5 --bd ~/repos/BlurDetection2 --blur 100 --clean --ngp ~/repos/instant-ngp --colmap_matcher sequential
 ```
 
 To run on rover_unprepared dataset:
 ```bash
-cd [Dir to Mars-Metaverse]
+cd [Dir to MaRF]
 python scripts/preprocessing/pipeline.py --input data/rover_unprepared/scans --output data/rover_unprepared/images --rgb --dedupe --bd [Dir to BlurDetection2] --clean --ngp [Dir to Instant-NGP] --colmap_matcher sequential
 ```
 
@@ -51,9 +51,9 @@ python [Dir to Instant-NGP]/scripts/colmap2nerf.py --colmap_matcher "exhaustive/
 
 
 ## 2. Running the Uncertainty module on top of Instant-NGP
-Move the script uncertainty.py (mars-metaverse/scripts/uncertainty/uncertainty.py) to the Instant-NGP scripts folder. We have included a prepared dataset in data/rover_2, with preprocessing steps already done. 
+Move the script uncertainty.py (MaRF/scripts/uncertainty/uncertainty.py) to the Instant-NGP scripts folder. We have included a prepared dataset in data/rover_2, with preprocessing steps already done. 
 ```bash
-mv ~/repos/mars-metaverse/scripts/uncertainty/uncertainty.py ~/repos/instant-ngp/scripts
+mv ~/repos/MaRF/scripts/uncertainty/uncertainty.py ~/repos/instant-ngp/scripts
 cd ~/repos/instant-ngp
 python scripts/uncertainty.py --scene {"dataset_directory"} --mode nerf --n_steps=int --gui
 ```
@@ -138,7 +138,7 @@ File Structure
 │   ├── instant-ngp
 │   │   ├── scripts
 │   │   └── ...
-│   ├── mars-metaverse
+│   ├── MaRF
 │   │   ├── .gitignore
 │   │   ├── configs
 │   │   ├── data
