@@ -17,10 +17,10 @@ class Sol(object):
 
         # constructing URLs
         if self.server == 'helicam':
-            self.url = 'https://pds-imaging.jpl.nasa.gov/data/mars2020/mars2020_helicam/browse/sol/'
+            self.url = 'https://planetarydata.jpl.nasa.gov/img/data/mars2020/mars2020_helicam/browse/sol/'
             self.sol_dir = self.url + str(self.idx).zfill(5) + '/ids/edr/heli/'
         elif self.server == 'mastcam':
-            self.url = 'https://pds-imaging.jpl.nasa.gov/data/mars2020/mars2020_mastcamz_ops_raw/browse/sol/'
+            self.url = 'https://planetarydata.jpl.nasa.gov/img/data/mars2020/mars2020_mastcamz_ops_raw/browse/sol/'
             self.sol_dir = self.url + str(self.idx).zfill(5) + '/ids/edr/zcam/'
 
     def parser(self):
