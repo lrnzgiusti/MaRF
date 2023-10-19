@@ -3,7 +3,7 @@ import re
 from pyquaternion import Quaternion
 
 
-radix = "https://pds-imaging.jpl.nasa.gov/data/mars2020/mars2020_mastcamz_ops_raw/browse/sol/" #for the sake of readability
+radix = "https://planetarydata.jpl.nasa.gov/img/data/mars2020/mars2020_mastcamz_ops_raw/browse/sol/" #for the sake of readability
 scan_1_path = radix+"00001/ids/edr/zcam/ZL0_0001_0667035659_000EBY_N0010052AUT_04096_0260LMJ03.png"
 scan_2_path = radix+"00163/ids/edr/zcam/ZL0_0163_0681407452_428EDR_N0060000ZCAM08171_1100LMJ03.png"
 
