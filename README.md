@@ -6,7 +6,6 @@ To install Instant NGP, the [following requirements](https://github.com/NVlabs/i
 - Linux: GCC/G++ 7.5 or higher
 - CUDA v10.2 or higher and CMake v3.21 or higher.
 
-
 ## 0b. Installation
 Create a directory named 'repos' in your home directory (~/repos). Clone all repositories in here. To install all software requirements, begin with the instructions to [install Instant-NGP](https://github.com/NVlabs/instant-ngp#requirements) for your system. PIP requirements for Instant NGP can be found in MaRF/requirements/ngp_requirements.txt.
 
